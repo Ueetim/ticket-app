@@ -1,16 +1,34 @@
-# ticket_app
+✈️ Flight Booking App – Flutter
 
-A new Flutter project.
+A sleek and intuitive flight booking app built with Flutter. Users can search for flights, compare prices, book tickets, and manage their reservations—all in one place.
+🚀 Features
 
-## Getting Started
+    🔍 Search Flights – Find flights based on destination, date, and price.
+    💳 Secure Booking – Easy payment integration for seamless ticket purchases.
+    📅 Trip Management – View upcoming and past bookings.
+    🔔 Notifications – Get real-time flight updates and reminders.
+    🌍 Multi-language Support – Accessible to users worldwide.
+    🎨 Modern UI/UX – Clean and responsive design for smooth navigation.
 
-This project is a starting point for a Flutter application.
+🛠 Tech Stack
 
-A few resources to get you started if this is your first Flutter project:
+    Flutter – Cross-platform mobile development.
+    Dart – Backend logic and state management.
+    Firebase / Supabase – Authentication, database, and notifications.
+    REST APIs – Fetch real-time flight data.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+📲 Get Started
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    Clone the repo:
+
+git clone https://github.com/yourusername/flight-booking-app.git
+
+Install dependencies:
+
+flutter pub get
+
+Run the app:
+
+    flutter run
+
+💡 Contributions are welcome! Feel free to fork, open issues, or submit pull requests.

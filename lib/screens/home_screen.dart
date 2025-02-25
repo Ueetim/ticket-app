@@ -6,6 +6,7 @@ import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/res/utils/all_json.dart';
 import 'package:ticket_app/base/widgets/app_double_text.dart';
 import 'package:ticket_app/base/widgets/ticket_view.dart';
+import 'package:ticket_app/screens/widgets/hotel.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -64,28 +65,46 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 40,),
-          const AppDoubleText(bigText: 'Upcoming Flights', smallText: 'View all'),
+          AppDoubleText(
+              bigText: 'Upcoming Flights',
+              smallText: 'View all',
+              func: () => Navigator.pushNamed(context, "/all_tickets"),
+          ),
           const SizedBox(height: 20,),
-          // SingleChildScrollView(
-          //   scrollDirection: Axis.horizontal,
-          //   padding: EdgeInsets.symmetric(horizontal: 20),
-          //   child: Row(
-          //     children: ticketList.take(2).map((singleTicket) => TicketView(ticket: singleTicket)).toList() // extract first two tickets
-          //   )
-          // )
 
           // for scroll snap
-          Container(
+          SizedBox(
             height: 185,
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            // padding: EdgeInsets.symmetric(horizontal: 20),
             child: PageView.builder(
-              controller: PageController(viewportFraction: 0.97),
+              controller: PageController(viewportFraction: 0.90),
               itemCount: ticketList.length,
               itemBuilder: (context, index) {
                 return TicketView(ticket: ticketList[index]);
               },
             ),
           ),
+
+          const SizedBox(height: 40,),
+          AppDoubleText(
+              bigText: 'Hotels',
+              smallText: 'View all',
+              func: () => {},
+          ),
+          const SizedBox(height: 20),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: hotelList.take(2).map((hotel) {
+                return Padding(
+                  padding: const EdgeInsets.only(right: 20), // Space between hotels
+                  child: Hotel(hotel: hotel),
+                );
+              }).toList(),
+            ),
+          ),
+          SizedBox(height: 40,)
         ],
       ),
     );
